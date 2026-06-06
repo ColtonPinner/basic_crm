@@ -44,7 +44,7 @@ export default function HomeScreen() {
           <ThemedView type="backgroundElement" style={styles.heroCard}>
             <View style={styles.badgeRow}>
               <ThemedText type="smallBold" style={styles.badgeText}>
-                Life insurance CRM
+                A CRM Built for what matters 
               </ThemedText>
               <ThemedText type="small" themeColor="textSecondary">
                 Built for advisors, agencies, and policy service teams
@@ -64,13 +64,6 @@ export default function HomeScreen() {
                 </ThemedText>
 
                 <View style={styles.ctaRow}>
-                  <Link href="/explore" asChild>
-                    <Pressable style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}>
-                      <ThemedText type="smallBold" style={styles.primaryButtonText}>
-                        See the workflow
-                      </ThemedText>
-                    </Pressable>
-                  </Link>
 
                   <Pressable style={({ pressed }) => [styles.secondaryButton, pressed && styles.pressed]}>
                     <ThemedText type="smallBold">Book a demo</ThemedText>
@@ -211,7 +204,7 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: MaxContentWidth + Spacing.six,
     paddingHorizontal: Spacing.three,
-    paddingTop: Spacing.six,
+    paddingTop: Spacing.six + 72,
     paddingBottom: BottomTabInset + Spacing.six,
     gap: Spacing.four,
   },
