@@ -3,9 +3,13 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "dependencies": {
+    "@better-auth/infra": "^0.2.13",
     "@expo/ui": "~56.0.16",
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "better-auth": "^1.6.14",
     "expo": "~56.0.9",
     "expo-constants": "~56.0.17",
+    "expo-crypto": "^56.0.4",
     "expo-device": "~56.0.4",
     "expo-font": "~56.0.5",
     "expo-glass-effect": "~56.0.4",
