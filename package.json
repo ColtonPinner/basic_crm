@@ -5,6 +5,8 @@
   "dependencies": {
     "@better-auth/expo": "^1.6.18",
     "@better-auth/infra": "^0.2.14",
+    "@expo/log-box": "^56.0.13",
+    "@expo/metro-runtime": "^56.0.15",
     "@expo/ui": "~56.0.17",
     "@react-native-async-storage/async-storage": "2.2.0",
     "better-auth": "^1.6.14",
