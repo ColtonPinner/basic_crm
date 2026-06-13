@@ -2,6 +2,7 @@ import { Link } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { authClient } from '@/auth/auth';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
@@ -64,6 +65,13 @@ export default function HomeScreen() {
                 </ThemedText>
 
                 <View style={styles.ctaRow}>
+                  <Pressable
+                    onPress={() => authClient.signOut()}
+                    style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}>
+                    <ThemedText type="smallBold" style={styles.primaryButtonText}>
+                      Sign out
+                    </ThemedText>
+                  </Pressable>
 
                   <Pressable style={({ pressed }) => [styles.secondaryButton, pressed && styles.pressed]}>
                     <ThemedText type="smallBold">Book a demo</ThemedText>

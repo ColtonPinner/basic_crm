@@ -1,16 +1,16 @@
-import { dashClient, sentinelNativeClient } from "@better-auth/infra/native";
-import { createAuthClient } from "better-auth/client";
+import { expoClient } from "@better-auth/expo/client";
+import { createAuthClient } from "better-auth/react";
+import * as SecureStore from "expo-secure-store";
 
 const baseURL = process.env.EXPO_PUBLIC_BETTER_AUTH_URL;
-const identifyUrl = process.env.EXPO_PUBLIC_BETTER_AUTH_KV_URL;
 
 export const authClient = createAuthClient({
-  baseURL: baseURL ?? "http://localhost:3000",
+  baseURL: baseURL ?? "http://localhost:8081",
   plugins: [
-    dashClient(),
-    sentinelNativeClient({
-      autoSolveChallenge: true,
-      ...(identifyUrl ? { identifyUrl } : {}),
+    expoClient({
+      scheme: "basiccrm",
+      storagePrefix: "basic-crm",
+      storage: SecureStore,
     }),
   ],
 });
